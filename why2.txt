@@ -1,0 +1,8 @@
+Answers to the two "Why?" questions
+
+1.  The before value of the fourth point is non zero because the second example has many similar tile indices, and after learning from the second example, the indices it's covered has already been updated.
+
+2.  The MSE does not decrease further toward zero because of the randomly generated number with a mean of 0 and standard deviation of 0.1. This is effecting the target in that it does not dip below 0.01 because 0.01 is the MSE and the MSE is the squared standard deviation.
+        MSE = SD^2
+        0.01 = 0.1^2
+

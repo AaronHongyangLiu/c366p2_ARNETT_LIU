@@ -1,0 +1,15 @@
+Answers to the 6 "Why?" questions
+
+1.  Every tile has a specific tile number, and the second tiling creates 121 new tiles (since we have 11x11 grid). Since the first tiling fills tile indices 0-120, then the second tiling ranges from 121-241.
+
+2.  Each tiling adds a new set of 121 tiles, starting at the next index that the previous tiling ends at. Since the first tiling ends at 120, the next first tile starts at 121. If you number the 8 tilings from 0-7 and multiply 121 to their index, it will give the first tile for the first 7 tilings. This is essentially saying that the point is found in the first tile for each of the first 7 tiling schemes.
+
+        0, 121, 242, 363, 484, 605, 726 = (121*0), (121*1), (121*2), (121*3), (121*4), (121*5), (121*6)
+
+3.  For the first seven tilings, the top right corner of the first tile is higher than 0.1,0,1 which means it contains the point. For the 8th tiling, the top right corner of the first tile is (0.6/8) which is 0.075, which is smaller than point 0.1, 0.1 and therefore does not contain the point. The point is then contained in the tile diagonally attached (12 indices higher)
+
+4.  The 13th tile in the 8th tiling is tile 859 because the point is in the second column of the second row. The second column in the second row is 12 tile indices higher than the first tile (1st column in first row), if we are counting to the right by 1's. Since the first tile index of the 8th tiling is 847 (which is 7*121), then the tile diagonally above that is tile 859.
+
+5.  The maximum tile index is 967 because there are 121 tiles per tiling, with a total of 8 tilings. One would assume the maximum to be 968 because (121*8) = 968, however we are starting from index 0, so the last index is 967.
+
+6.  The second and fourth examples have very similar outputs because their inputs are extremely similar. The point in y axis differs by 0.1, which means they are most often found in the same tile for each tiling. However, since there is 0.1 difference in the y axis, this affects which tile the point is found in for the 6th and 7th tiling. For these tilings, the point is found 1 row higher (11 tiles greater).

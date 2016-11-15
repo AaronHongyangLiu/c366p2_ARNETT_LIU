@@ -1,0 +1,10 @@
+The plot after running the learn function for 20 episodes shows roughly 6 peaks, and 4 valleys.
+The strong peaks all have similar height which is around 0.06. The peak have similar heights because
+the step size is only 0.1/8 and only being ran for 20 episodes. This means that the updates for each episode
+will only update the height a maximum of ~1% of it's true value. This also explains why the widths of the peaks
+and valleys are similar. The area on the plot where there are no peaks or values are simply due to the fact that
+the 20 episodes did not cover any points in those tiles.
+
+If the dimensions of the tiles were changed to 11x21, the plot would have more peaks/valleys. This means
+that examples 2 and 4 will be effecting less of the same tiles, since there are more tiles covering the same
+amount of area.
