@@ -3,7 +3,7 @@ from pylab import zeros, sin, cos, normal, random
 
 from Tilecoder import numTilings, tilecode
 
-n = 8*11*11
+n = numTilings*11*11
 theta = [0]*n    # initialize weights appropriately here
 alpha = 0.1/numTilings    # initialize step size parameter appropriately here
 indices = [-1]*numTilings   # initialize your list of tile indices here
@@ -73,5 +73,5 @@ def test2():
         MSE(10000)
     writeF('f10000')
 
-test1()
+test2()
 
