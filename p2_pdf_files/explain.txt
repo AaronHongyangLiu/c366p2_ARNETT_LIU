@@ -1,3 +1,5 @@
+Explanation of part 2
+
 The plot after running the learn function for 20 episodes shows roughly 6 peaks, and 4 valleys.
 The strong peaks all have similar height which is around 0.06. The peak have similar heights because
 the step size is only 0.1/8 and only being ran for 20 episodes. This means that the updates for each episode
