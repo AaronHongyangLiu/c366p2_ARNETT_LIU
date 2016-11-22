@@ -5,8 +5,8 @@ def tilecode(in1, in2, tileIndices):
     # write your tilecoder here (5 lines or so)
     for i in range(len(tileIndices)):
         firstTile = i * 121
-        deltaIn1 = (in1 + i * (0.6 / numTilings)) // 0.6
-        deltaIn2 = (in2 + i * (0.6 / numTilings)) // 0.6
+        deltaIn1 = round((in1 + i * (0.6 / numTilings)),3) // 0.6
+        deltaIn2 = round((in2 + i * (0.6 / numTilings)),3) // 0.6
         tileIndices[i] = int(firstTile + deltaIn1 + 11 * deltaIn2)
 
 
