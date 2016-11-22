@@ -9,16 +9,17 @@ tileIndices = [-1]*numTilings  # initialize your list of tile indices here
 def f(in1, in2):
     # write your linear function approximator here (5 lines or so)
     tilecode(in1,in2,tileIndices)
-    sum = 0
+    sum1 = 0
     for index in tileIndices:
-        sum += theta[index]
-    return sum
+        sum1 += theta[index]
+    return sum1
 
 def learn(in1, in2, target):
     # write your gradient descent learning algorithm here (3 lines or so)
     tilecode(in1,in2,tileIndices)
+    fVal = f(in1,in2)
     for index in tileIndices:
-        theta[index] = theta[index] + alpha * (target - f(in1,in2))
+        theta[index] = theta[index] + alpha * (target - fVal)
 
 def test1():
    for in1, in2, target in \
